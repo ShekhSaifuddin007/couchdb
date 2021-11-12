@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [CouchDBController::class, 'index']);
+// Route::get('users/{id}/edit', [CouchDBController::class, 'edit'])->name('users.edit');
+Route::post('users', [CouchDBController::class, 'store'])->name('users.store');
+Route::post('users/update', [CouchDBController::class, 'update'])->name('users.update');
+Route::get('users/{id}/delete', [CouchDBController::class, 'destroy'])->name('users.destroy');
